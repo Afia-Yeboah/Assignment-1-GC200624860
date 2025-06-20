@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.assignment1gc200624860.AnimeController">
+   <children>
+      <TableView fx:id="animeTable" layoutX="40.0" layoutY="100.0" prefHeight="240.0" prefWidth="453.0">
+        <columns>
+          <TableColumn fx:id="titleCol" prefWidth="75.0" text="Title" />
+          <TableColumn fx:id="genreCol" prefWidth="75.0" text="Genre" />
+            <TableColumn fx:id="yearCol" prefWidth="75.0" text="Year" />
+            <TableColumn fx:id="episodesCol" prefWidth="75.0" text="Episodes" />
+            <TableColumn fx:id="ratingCol" prefWidth="75.0" text="Rating" />
+            <TableColumn fx:id="popularityCol" prefWidth="75.0" text="Popularity" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
