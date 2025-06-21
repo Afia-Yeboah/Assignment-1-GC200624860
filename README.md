@@ -6,3 +6,4 @@ It allows the user to determine what series is a good boredom escape.</p>
 - The Bar Chart shows the anime by popularity
 - The Table View shows all the series etc. title, genre, episodes etc
 - The switch scene alternates between the Chart and Table connecting to the Database, which allows users different views
+![anime2-icon.jpg](src/main/resources/images/anime2-icon.jpg)
