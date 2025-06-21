@@ -6,7 +6,6 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.assignment1gc200624860.AnimeChartController">
    <children>
       <BarChart fx:id="animeChart" layoutX="70.0" layoutY="25.0" prefHeight="350.0" prefWidth="493.0">
@@ -17,6 +16,6 @@
           <NumberAxis fx:id="numAxis" side="LEFT" />
         </yAxis>
       </BarChart>
-      <Button fx:id="goToTable" layoutX="214.0" layoutY="350.0" mnemonicParsing="false" text="View Table" textAlignment="CENTER" />
+      <Button fx:id="goToTable" layoutX="325.0" layoutY="349.0" mnemonicParsing="false" onAction="#goToTable" text="View Table" textAlignment="CENTER" />
    </children>
 </AnchorPane>
