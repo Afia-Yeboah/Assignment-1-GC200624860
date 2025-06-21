@@ -21,16 +21,26 @@
             <TableColumn fx:id="popularityCol" prefWidth="75.0" text="Popularity" />
         </columns>
       </TableView>
-      <Button fx:id="backToChart" layoutX="236.0" layoutY="343.0" mnemonicParsing="false" onAction="#goToChart" prefHeight="39.0" prefWidth="175.0" stylesheets="@../../../css/styles.css" text="View Chart" textAlignment="CENTER" textFill="#cf2c15">
+      <Button fx:id="backToChart" layoutX="442.0" layoutY="341.0" mnemonicParsing="false" onAction="#goToChart" prefHeight="31.0" prefWidth="155.0" stylesheets="@../../../css/styles.css" text="View Chart" textAlignment="CENTER" textFill="#cf2c15">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
          <font>
-            <Font name="Georgia" size="14.0" />
+            <Font name="Georgia Italic" size="12.0" />
          </font></Button>
-      <ImageView fitHeight="31.0" fitWidth="123.0" layoutX="249.0" layoutY="347.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="40.0" fitWidth="31.0" layoutX="442.0" layoutY="341.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../images/anime2-icon.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="showAllButton" layoutX="15.0" layoutY="346.0" mnemonicParsing="false" onAction="#onShowAll" prefHeight="31.0" prefWidth="155.0" text="Show All Anime" wrapText="true">
+         <font>
+            <Font name="Georgia Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="31.0" fitWidth="49.0" layoutX="14.0" layoutY="346.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/anime5-icon.jpg" />
          </image>
       </ImageView>
    </children>

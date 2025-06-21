@@ -21,11 +21,11 @@
           <NumberAxis fx:id="numAxis" side="LEFT" stylesheets="@../../../css/styles.css" tickLabelFill="#a82020" />
         </yAxis>
       </BarChart>
-      <Button fx:id="goToTable" layoutX="244.0" layoutY="457.0" mnemonicParsing="false" onAction="#goToTable" prefHeight="33.0" prefWidth="155.0" stylesheets="@../../../css/styles.css" text="View Table" textAlignment="JUSTIFY" textFill="#ae1515" wrapText="true">
+      <Button fx:id="goToTable" layoutX="244.0" layoutY="457.0" mnemonicParsing="false" onAction="#goToTable" prefHeight="33.0" prefWidth="155.0" stylesheets="@../../../css/styles.css" text="View Top 10" textAlignment="JUSTIFY" textFill="#ae1515" wrapText="true">
          <font>
-            <Font name="Georgia" size="14.0" />
+            <Font name="Georgia Bold Italic" size="12.0" />
          </font></Button>
-      <ImageView fitHeight="33.0" fitWidth="29.0" layoutX="250.0" layoutY="459.0" pickOnBounds="true" preserveRatio="true" styleClass="button">
+      <ImageView fitHeight="33.0" fitWidth="32.0" layoutX="244.0" layoutY="459.0" pickOnBounds="true" preserveRatio="true" styleClass="button">
          <image>
             <Image url="@../../../images/anime3-icon.jpg" />
          </image>

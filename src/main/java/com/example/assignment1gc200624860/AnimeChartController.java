@@ -16,7 +16,11 @@ import javafx.stage.Stage;
 import java.sql.*;
 import java.io.IOException;
 
-
+/**
+ * This controls the chart scene
+ * It loads the Anime data and populate the bar char
+ * it also handles the View Table button
+ */
 public class AnimeChartController {
 
     @FXML
@@ -34,6 +38,9 @@ public class AnimeChartController {
     // fetch the list of the anime rows
     private final ObservableList<Anime> animeList = FXCollections.observableArrayList();
 
+    /**
+     * After the FXML loads: pull data and draw up the top 10 bars
+     */
     @FXML
     private void initialize() {
         // fetch the list from the DB
@@ -43,7 +50,7 @@ public class AnimeChartController {
         populateChart();
     }
 
-    // load all the Anime into the animeList
+    // load all the Anime row into the animeList from DB
     private void loadAnime() {
         String sql = "SELECT title, genre, year, episodes, rating, popularity FROM AnimeData";
 
@@ -66,6 +73,10 @@ public class AnimeChartController {
             e.printStackTrace();
         }
     }
+
+    /**
+     * Display the top 10 popularity into the bar chart
+     */
     private void populateChart() {
         XYChart.Series<String, Number> series = new XYChart.Series<>();
         series.setName("Top 10 Animes By Popularity");
@@ -81,6 +92,9 @@ public class AnimeChartController {
         animeChart.getData().add(series);
     }
 
+    /**
+     * Switching between the table scene when the button is clicked
+     */
     @FXML
     private void goToTable(ActionEvent event) throws IOException {
         Stage stage = (Stage) goToTable.getScene().getWindow();
