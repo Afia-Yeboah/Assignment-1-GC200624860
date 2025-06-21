@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.NumberAxis;
+import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
 import java.sql.*;
 import java.io.IOException;
@@ -60,5 +61,18 @@ public class AnimeChartController {
             e.printStackTrace();
         }
     }
+    private void populateChart() {
+        XYChart.Series<String, Number> series = new XYChart.Series<>();
+        series.setName("Top 10 Animes By Popularity");
 
+        animeList.stream()
+                .sorted((a,b) -> Double.compare(b.getPopularity(), a.getPopularity()))
+                .limit(10)
+                .forEach(a ->
+                        series.getData().add(
+                                new XYChart.Data<>(a.getTitle(), a.getPopularity())
+                        )
+                );
+        animeChart.getData().add(series);
+    }
 }
