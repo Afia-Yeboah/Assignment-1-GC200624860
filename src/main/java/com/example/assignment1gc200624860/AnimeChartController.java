@@ -2,12 +2,17 @@ package com.example.assignment1gc200624860;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
+import javafx.stage.Stage;
+
 import java.sql.*;
 import java.io.IOException;
 
@@ -74,5 +79,15 @@ public class AnimeChartController {
                         )
                 );
         animeChart.getData().add(series);
+    }
+
+    @FXML
+    private void goToTable(ActionEvent event) throws IOException {
+        Stage stage = (Stage) goToTable.getScene().getWindow();
+        FXMLLoader loader = new FXMLLoader(
+                getClass().getResource("anime-table-view.fxml")
+        );
+        Scene scene = new Scene(loader.load());
+        stage.setScene(scene);
     }
 }
