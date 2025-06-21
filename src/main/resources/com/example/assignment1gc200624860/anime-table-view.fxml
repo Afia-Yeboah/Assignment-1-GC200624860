@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../../../css/styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.assignment1gc200624860.AnimeController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../../../css/styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.assignment1gc200624860.AnimeController">
    <children>
       <TableView fx:id="animeTable" layoutX="73.0" layoutY="90.0" prefHeight="240.0" prefWidth="453.0">
         <columns>
@@ -16,9 +21,17 @@
             <TableColumn fx:id="popularityCol" prefWidth="75.0" text="Popularity" />
         </columns>
       </TableView>
-      <Button fx:id="backToChart" layoutX="270.0" layoutY="344.0" mnemonicParsing="false" onAction="#goToChart" prefHeight="25.0" prefWidth="101.0" text="View Chart">
+      <Button fx:id="backToChart" layoutX="236.0" layoutY="343.0" mnemonicParsing="false" onAction="#goToChart" prefHeight="39.0" prefWidth="175.0" stylesheets="@../../../css/styles.css" text="View Chart" textAlignment="CENTER" textFill="#cf2c15">
          <cursor>
             <Cursor fx:constant="HAND" />
-         </cursor></Button>
+         </cursor>
+         <font>
+            <Font name="Georgia" size="14.0" />
+         </font></Button>
+      <ImageView fitHeight="31.0" fitWidth="123.0" layoutX="249.0" layoutY="347.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/anime2-icon.jpg" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
