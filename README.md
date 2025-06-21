@@ -7,6 +7,7 @@ It allows the user to determine what series is a good boredom escape.</p>
 - The Table View shows all the series etc. title, genre, episodes etc
 - The switch scene alternates between the Chart and Table connecting to the Database, which allows users different views
 
-- <p float ="left">
-<img src="./images/screenshot1.png" width="300" alt="Chart view"/>
-<img src="./images/screenshot2.png" width="300" alt="Table view"/>
+<p>
+  <img src="./images/screenshot1.png" width="300" alt="Chart view" />
+  <img src="./images/screenshot2.png" width="300" alt="Table view" />
+</p>
