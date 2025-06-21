@@ -2,11 +2,17 @@ package com.example.assignment1gc200624860;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.sql.*;
 
 public class AnimeController {
@@ -32,6 +38,9 @@ public class AnimeController {
 
     @FXML
     private TableColumn<Anime, Double> popularityCol;
+
+    @FXML
+    private Button backToChart;
 
     @FXML
     private void initialize() {
@@ -75,4 +84,17 @@ public class AnimeController {
             e.printStackTrace();
         }
     }
+
+
+    @FXML
+    private void goToChart(ActionEvent event) throws IOException {
+        Stage stage = (Stage) backToChart.getScene().getWindow();
+        FXMLLoader loader = new FXMLLoader(
+                getClass().getResource("anime-chart-view.fxml")
+        );
+        Scene scene = new Scene(loader.load());
+        stage.setScene(scene);
+    }
+
 }
+

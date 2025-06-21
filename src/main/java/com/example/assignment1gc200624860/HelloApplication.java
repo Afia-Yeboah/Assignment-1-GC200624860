@@ -3,6 +3,7 @@ package com.example.assignment1gc200624860;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -12,6 +13,10 @@ public class HelloApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("anime-chart-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
+
+        // adding the icon when the application loads
+        var iconStream = HelloApplication.class.getResourceAsStream("/images/anime-icon.jpg");
+        stage.getIcons().add(new Image(iconStream));
         stage.setTitle("Anime Popularity Chart!");
         stage.setScene(scene);
         stage.show();
